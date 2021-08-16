@@ -36,7 +36,9 @@ dependencies {
     //
     implementation 'androidx.core:core-ktx:'+ rootProject.kotlinCoreVersion
     //
-    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:'+rootProject.youtubeplayerversion
+    //stepview
+    implementation 'com.shuhart.stepview:stepview:' +rootProject.stepViewVersion
 
     implementation 'androidx.recyclerview:recyclerview:' + rootProject.recyclerViewVersion
     implementation 'androidx.navigation:navigation-fragment:'+ rootProject.navigationUIVersion

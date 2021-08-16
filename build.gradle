@@ -70,6 +70,8 @@ ext {
     googleSecLibVersion = "1.1.0-alpha03"
     //
     googleDaggerVersion = "2.19"
+    //stepview
+    stepViewVersion = "1.5.1"
 
     //ekenya Libs
     ekenyeEntryptionLibVersion = "1.0.2" // Data Encryption Library
@@ -79,4 +81,8 @@ ext {
     ekenyaLoggingLibVersion = "1.0" //Logging Library
     ekenyaSecurityLibVersion = "1.0" //Security Library
     ekenyaDataConversionLibVersion = "1.0" //Data Conversions Library
+
+    //youtubeplayers
+
+    youtubeplayerversion = "10.0.5"
 }

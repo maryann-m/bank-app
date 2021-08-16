@@ -18,9 +18,14 @@ import javax.inject.Singleton;
 import org.jetbrains.annotations.NotNull;
 
 @Singleton
-@Component(modules = {AndroidSupportInjectionModule.class,  AppModule.class,  ViewModelModule.class,
-                ActivityModule.class, FragmentModule.class} )
-public interface AppComponent extends AndroidInjector<TourismApp> {
+@Component(modules = {
+        AndroidSupportInjectionModule.class,
+        AppModule.class,
+        ViewModelModule.class,
+                ActivityModule.class,
+        FragmentModule.class
+} )
+public interface    AppComponent extends AndroidInjector<TourismApp> {
     @NotNull
     SampleRepository sampleRepository();
 
