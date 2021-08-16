@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/rootviewStyle">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/balance_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginEnd="23dp"
+
+            android:layout_marginRight="23dp"
+            android:gravity="center"
+            android:text="Balance"
+            android:textColor="#6C6C6C"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/walletbalance_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/ksh_112_800_00"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/balance_tv"
+            app:layout_constraintStart_toStartOf="@+id/balance_tv"
+            app:layout_constraintTop_toBottomOf="@+id/balance_tv" />
+
+        <Button
+            android:id="@+id/makePaymentsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:layout_marginTop="30dp"
+            android:text="Make Payment"
+            android:textSize="12sp"
+
+            app:layout_constraintEnd_toEndOf="@id/balance_tv"
+            app:layout_constraintStart_toStartOf="@id/balance_tv"
+            app:layout_constraintTop_toBottomOf="@+id/walletbalance_value">
+
+
+        </Button>
+
+        <TextView
+            android:id="@+id/topupwalletTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/top_up_wallet"
+            android:textColor="@color/app_red"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/makePaymentsButton" />
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/statement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_statements"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chazacard"
+            app:layout_constraintTop_toTopOf="@+id/savings"
+            />
+
+        <ImageView
+            android:src="@drawable/ic_chaza_card_2"
+            android:id="@+id/chazacard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/statement"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/savings"
+            app:layout_constraintTop_toTopOf="@id/savings"
+            />
+
+        <ImageView
+            android:id="@+id/savings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_savings_account"
+
+            app:layout_constraintEnd_toStartOf="@+id/chazacard"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topupwalletTv"
+            />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/savings_account"
+            android:textColor="#707070"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/savings"
+            app:layout_constraintStart_toStartOf="@+id/savings"
+            app:layout_constraintTop_toBottomOf="@+id/savings" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/chaza_card"
+            android:textColor="#707070"
+
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/chazacard"
+            app:layout_constraintStart_toStartOf="@+id/chazacard"
+            app:layout_constraintTop_toBottomOf="@+id/chazacard" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/statements"
+            android:textColor="#707070"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/statement"
+            app:layout_constraintStart_toStartOf="@+id/statement"
+            app:layout_constraintTop_toBottomOf="@+id/statement" />
+
+        <TextView
+            app:layout_constraintTop_toTopOf="@id/textView6"
+            android:id="@+id/historyTv"
+            android:layout_marginTop="42dp"
+
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history"
+            android:layout_marginStart="@dimen/margin12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="@dimen/margin12dp" />
+
+        <Button
+            android:id="@+id/seeallbtn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:layout_constraintTop_toTopOf="@id/historyTv"
+            app:layout_constraintBottom_toTopOf="@id/historyTv"
+            android:layout_width="wrap_content"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+
+            android:text="See all"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/historyRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/historyTv"
+            app:layout_constraintTop_toBottomOf="@id/historyTv"/>
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="9dp"
+            android:layout_marginRight="9dp"
+            android:layout_marginStart="10dp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/walletbalance_value"
+            app:layout_constraintStart_toEndOf="@+id/walletbalance_value"
+            app:layout_constraintTop_toTopOf="@+id/walletbalance_value"
+
+            android:src="@drawable/ic_visibility__1_"
+            android:layout_marginLeft="10dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

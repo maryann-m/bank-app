@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.learnkenya.BibleKenyaFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/personImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/sneha"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/margin12dp"
+            android:layout_marginRight="@dimen/margin12dp"
+            app:layout_constraintStart_toStartOf="@id/thebeautifulpeopleofKenya_tv"
+            app:layout_constraintTop_toBottomOf="@+id/textcont" />
+        <TextView
+
+            android:id="@+id/textcont2"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/margin12dp"
+            android:layout_marginStart="@dimen/margin12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="@dimen/margin12dp"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin12dp"
+            android:text="But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to."
+            app:layout_constraintTop_toBottomOf="@id/personImage"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textcont"/>
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="120dp"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:src="@drawable/map"
+                    android:scaleType="centerCrop"/>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/lKenyatoolbar"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="?attr/actionBarSize"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                    <ImageView
+
+                        android:id="@+id/close_icon"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ic_time"
+                        android:layout_height="wrap_content"/>
+                </androidx.appcompat.widget.Toolbar>
+            </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/pagecounttv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/page1_12"
+        android:layout_marginTop="15dp"
+        android:textSize="10sp"
+        android:textColor="#707071"
+        android:layout_marginBottom="@dimen/margin12dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarlayout" />
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+
+            android:theme="@style/ProgressBarTheme"
+            android:progress="10"
+            android:background="#707071"
+            android:layout_marginTop="@dimen/margin12dp"
+            app:layout_constraintTop_toBottomOf="@id/pagecounttv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/thebeautifulpeopleofKenya_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textSize="14sp"
+            android:textStyle="bold
+"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="17dp"
+            android:text="@string/the_beautiful_people_of_kenya"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pagecounttv" />
+
+        <TextView
+            android:id="@+id/textcont"
+            android:layout_marginEnd="@dimen/margin12dp"
+            android:layout_marginStart="@dimen/margin12dp"
+            android:layout_marginLeft="@dimen/margin12dp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/margin12dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to."
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/thebeautifulpeopleofKenya_tv"
+            app:layout_constraintTop_toBottomOf="@+id/thebeautifulpeopleofKenya_tv" />
+        <Button
+            android:id="@+id/btnsetpin"
+            style="@style/button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="@dimen/margin12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="100dp"
+            android:text="@string/see_on_map"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textcont2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

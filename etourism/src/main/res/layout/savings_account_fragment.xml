@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    style="@style/rootviewStyle"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/close_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/savingsbalance_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center_horizontal"
+
+            android:text="@string/savings_balance"
+            android:textAlignment="center"
+            android:textColor="#6C6C6C"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/close_icon" />
+
+        <TextView
+            android:id="@+id/savingsbalanceamt_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_horizontal"
+            android:text="@string/kes_12_800_00"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/savingsbalance_tv" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
+            android:layout_height="112dp"
+            style="@style/savingsAccountcardview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/close_icon"
+            app:layout_constraintTop_toBottomOf="@id/savingsbalanceamt_tv"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/growthicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/ic_growth"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/targetedamount_tv"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/targetedamount_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Targeted Amount:"
+
+
+                    android:textColor="#6C6C6C"
+
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toStartOf="@+id/targetedamount_money"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/growthicon"
+                    app:layout_constraintTop_toTopOf="@id/growthicon" />
+
+                <TextView
+                    android:id="@+id/durationtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Duration:"
+
+
+                    android:textColor="#6C6C6C"
+
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@id/growthicon"
+                    app:layout_constraintStart_toStartOf="@+id/targetedamount_tv" />
+
+                <TextView
+                    android:id="@+id/durationvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="2 Months:"
+
+
+                    android:textColor="#6C6C6C"
+
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@id/growthicon"
+                    app:layout_constraintStart_toEndOf="@+id/growthicon"
+                    app:layout_constraintStart_toStartOf="@+id/targetedamount_money" />
+
+                <TextView
+                    android:id="@+id/targetedamount_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="KSH 50,000.00"
+                    android:textSize="10sp"
+
+
+                    android:textStyle="bold"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/targetedamount_tv"
+                    app:layout_constraintTop_toTopOf="@id/growthicon" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/trip_cardview"
+            style="@style/savingsAccountcardview"
+            android:layout_height="160dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/close_icon"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/trip_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/ic_growth"
+                    app:layout_constraintEnd_toStartOf="@+id/masaaiMaraCamptv"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/masaaiMaraCamptv" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="KSH 36,000"
+                    android:textColor="#FF000000"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/masaaiMaraCamptv"
+                    app:layout_constraintTop_toTopOf="@+id/amounttv" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="04-09-2021"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textView14"
+                    app:layout_constraintTop_toTopOf="@+id/datetv" />
+
+                <TextView
+                    android:id="@+id/masaaiMaraCamptv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masaai Mara Camp"
+                    android:textColor="#6C6C6C"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toTopOf="@+id/amounttv"
+                    app:layout_constraintEnd_toStartOf="@+id/textView14"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/trip_icon"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/amounttv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount:"
+                    android:textColor="#6C6C6C"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toTopOf="@+id/datetv"
+                    app:layout_constraintStart_toStartOf="@+id/masaaiMaraCamptv"
+                    app:layout_constraintTop_toBottomOf="@+id/masaaiMaraCamptv" />
+
+                <TextView
+                    android:id="@+id/datetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:textColor="#6C6C6C"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toTopOf="@+id/seefulltripbtn"
+                    app:layout_constraintStart_toStartOf="@+id/amounttv"
+                    app:layout_constraintTop_toBottomOf="@+id/amounttv" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/seefulltripbtn"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="See full trip"
+
+
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/textView15"
+                    app:layout_constraintStart_toStartOf="@+id/datetv"
+                    app:layout_constraintTop_toBottomOf="@+id/datetv"
+                    app:strokeColor="@color/app_red" />
+
+                <ImageView
+                    android:id="@+id/imageView29"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="21dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/masaaiMaraCamptv"
+                    app:srcCompat="@drawable/ic_group" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_deposit_to_account"
+            app:layout_constraintEnd_toStartOf="@+id/imageView6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/trip_cardview" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_deposit_to_account_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView5"
+            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center_horizontal"
+            android:text="Deposit to Savings \n Account"
+            android:textAlignment="center"
+            android:textColor="#6C6C6C"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/textView20"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Withdraw from Savings \n Account"
+            android:textAlignment="center"
+            android:textColor="#6C6C6C"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textView19"
+            app:layout_constraintTop_toTopOf="@+id/textView19" />
+
+        <TextView
+            android:id="@+id/history_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:text="History"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/seeall_tv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+        <TextView
+            android:id="@+id/seeall_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:text="See all"
+            android:textColor="@color/app_red"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/history_tv"
+            app:layout_constraintTop_toTopOf="@+id/history_tv" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/historyRecyclerview"
+            android:layout_width="0dp"
+            android:layout_height="152dp"
+
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@id/trip_cardview"
+            app:layout_constraintStart_toStartOf="@+id/history_tv"
+            app:layout_constraintTop_toBottomOf="@+id/seeall_tv" />
+
+        <ImageView
+            android:id="@+id/imageView30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/savingsbalanceamt_tv"
+            app:layout_constraintStart_toEndOf="@+id/savingsbalanceamt_tv"
+            app:layout_constraintTop_toTopOf="@+id/savingsbalanceamt_tv"
+            app:srcCompat="@drawable/ic_visibility__1_icon" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout></ScrollView>

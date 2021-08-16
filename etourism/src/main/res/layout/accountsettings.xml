@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarlayout"
+            app:elevation="0dp"
+            android:layout_marginTop="22dp"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/lKenyatoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/close_icon"
+                        android:layout_width="8dp"
+                        android:layout_height="12dp"
+                        android:src="@drawable/ic_back__1_"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Account Settings"
+                        android:textColor="#707070"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/personaldetailstv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="38dp"
+            android:text="Personal Details"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbarlayout" />
+
+        <ImageView
+            android:id="@+id/personaldetailsicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="22dp"
+            app:layout_constraintBottom_toBottomOf="@+id/personaldetailstv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/personaldetailstv"
+            android:src="@drawable/ic_person" />
+        <View
+            android:id="@+id/personaldetailsview"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="@id/personaldetailsicon"
+            android:background="@color/black"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/personaldetailstv"
+            app:layout_constraintTop_toBottomOf="@id/personaldetailstv"/>
+        <TextView
+            android:id="@+id/myTravelstv"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/personaldetailsview"
+            app:layout_constraintStart_toStartOf="@id/personaldetailstv"
+            android:layout_height="wrap_content"
+            android:text="My Travels"/>
+        <View
+            android:id="@+id/mytravelsview"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="@id/personaldetailsicon"
+            android:background="@color/black"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/personaldetailstv"
+            app:layout_constraintTop_toBottomOf="@id/myTravelstv"/>
+
+        <ImageView
+            android:id="@+id/imageView37"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/myTravelstv"
+            app:layout_constraintStart_toStartOf="@+id/personaldetailsicon"
+            app:layout_constraintTop_toTopOf="@+id/myTravelstv"
+            android:src="@drawable/ic_plane" />
+
+        <TextView
+            android:id="@+id/supportstv"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/mytravelsview"
+            app:layout_constraintStart_toStartOf="@id/personaldetailstv"
+            android:layout_height="wrap_content"
+            android:text="Support"/>
+        <View
+            android:id="@+id/supportview"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="@id/personaldetailsicon"
+            android:background="@color/black"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/personaldetailstv"
+            app:layout_constraintTop_toBottomOf="@id/supportstv"/>
+
+        <ImageView
+            android:id="@+id/supportimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/supportstv"
+            app:layout_constraintStart_toStartOf="@+id/personaldetailsicon"
+            app:layout_constraintTop_toTopOf="@+id/supportstv"
+            android:src="@drawable/ic_support" />
+
+        <TextView
+            android:id="@+id/changepintv"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/supportview"
+            app:layout_constraintStart_toStartOf="@id/personaldetailstv"
+            android:layout_height="wrap_content"
+            android:text="Change Wallet Pin"/>
+        <View
+            android:id="@+id/pinview"
+            android:layout_width="0dp"
+            app:layout_constraintEnd_toEndOf="@id/personaldetailsicon"
+            android:background="@color/black"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="@id/personaldetailstv"
+            app:layout_constraintTop_toBottomOf="@id/changepintv"/>
+
+        <ImageView
+            android:id="@+id/pinimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_dialpad"
+            app:layout_constraintBottom_toBottomOf="@+id/changepintv"
+            app:layout_constraintStart_toStartOf="@+id/personaldetailsicon"
+            app:layout_constraintTop_toTopOf="@+id/changepintv" />
+
+
+
+
+        <TextView
+            android:id="@+id/logouttv"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/pinview"
+            app:layout_constraintStart_toStartOf="@id/personaldetailstv"
+            android:layout_height="wrap_content"
+            android:text="Logout"/>
+
+
+        <ImageView
+            android:id="@+id/logoutimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_exit"
+            app:layout_constraintBottom_toBottomOf="@+id/logouttv"
+            app:layout_constraintStart_toStartOf="@+id/personaldetailsicon"
+            app:layout_constraintTop_toTopOf="@+id/logouttv" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

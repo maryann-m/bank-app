@@ -1,0 +1,124 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    <style name="ShapeAppearanceOverlay.MyApp.Button.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="makepaymentroundedtextviewstyle">
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textSize">10sp</item>
+
+
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">58dp</item>
+        <item name="android:paddingLeft">23dp</item>
+        <item name="android:paddingRight">23dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">19dp</item>
+        <item name="android:layout_marginLeft">19dp</item>
+        <item name="android:layout_marginTop">26dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+        <item name="android:background">#EC3D97</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlayExtended" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">5dp</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="OutlinedTextField_style" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/statement_bg</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="helperText">@string/required</item>
+        <item name="helperTextEnabled">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="hintTextColor">#FF0000</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="helperTextTextColor">#FF0000</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="outlinetextboxwithredboarder" parent="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/app_red</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="helperText">@string/required</item>
+        <item name="helperTextEnabled">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textSize">10sp</item>
+        <item name="hintTextColor">#FF0000</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="helperTextTextColor">#FF0000</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ProgressBarTheme" parent="ThemeOverlay.AppCompat.Light">
+        <item name="colorAccent">@color/app_red</item>
+    </style>
+
+    <style name="headerBar">
+        <item name="android:background">#303F9F</item>
+
+    </style>
+
+    <style name="button_style">
+
+        <item name="android:layout_marginRight">12dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+
+        <item name="android:padding">15dp</item>
+        <item name="backgroundTint">@color/app_red</item>
+
+    </style>
+
+    <style name="savingsAccountcardview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="cardElevation">5dp</item>
+        <item name="android:layout_marginStart">@dimen/margin12dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginLeft">@dimen/margin12dp</item>
+        <item name="android:layout_marginEnd">@dimen/margin12dp</item>
+        <item name="android:layout_marginRight">@dimen/margin12dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">@id/close_icon</item>
+    </style>
+
+    <style name="rootviewStyle">
+        <item name="android:fillViewport">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="tabstextstyle">
+        <item name="android:textSize">10sp</item>
+        <item name="tabTextColor">#FF000000</item>
+        <item name="tabSelectedTextColor">@color/app_red</item>
+    </style>
+
+    <style name="Appbarstyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+
+    <string name="required">Required*</string>
+</resources>

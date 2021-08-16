@@ -1,0 +1,163 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/rootviewStyle">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarlayout"
+            style="@style/Appbarstyle"
+            >
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/lKenyatoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/close_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_back__1_"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/fragmenttitletv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="200dp"
+                        android:layout_marginLeft="113dp"
+                        android:text="Bank Cards"
+
+
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView9"
+                        android:layout_width="39dp"
+                        android:layout_height="16dp"
+                        android:layout_marginEnd="292dp"
+                        android:layout_marginRight="292dp"
+                        android:layout_marginBottom="0dp"
+                        android:src="@drawable/ic_credit_card"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/fragmenttitletv"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cardNumber"
+            style="@style/outlinetextboxwithredboarder"
+
+            android:layout_width="0dp"
+
+            android:layout_marginStart="19dp"
+
+
+            android:layout_marginLeft="25dp"
+
+            android:layout_marginTop="49dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginRight="19dp"
+
+            android:hint="Card Number    "
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appbarlayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="12sp"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/csvbtn"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginEnd="@dimen/margin12dp"
+            android:layout_marginRight="@dimen/margin12dp"
+            android:padding="8dp"
+
+            android:text="CSV"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/cardNumber"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/datebtn"
+            app:layout_constraintTop_toTopOf="@+id/datebtn"
+            app:strokeColor="@color/app_red" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/datebtn"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="@dimen/margin12dp"
+            android:layout_marginRight="@dimen/margin12dp"
+
+            android:padding="8dp"
+            android:text="MM/YY"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/csvbtn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/cardNumber"
+            app:layout_constraintTop_toBottomOf="@+id/cardNumber"
+            app:strokeColor="@color/app_red" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="The payment is secure and your details are safe"
+            android:textColor="@color/app_red"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/datebtn"
+            app:layout_constraintTop_toBottomOf="@+id/datebtn" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="20dp"
+            android:text="CONTINUE"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout></ScrollView>

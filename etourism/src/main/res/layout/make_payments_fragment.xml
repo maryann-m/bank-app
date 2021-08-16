@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/rootviewStyle">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:elevation="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/lKenyatoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:id="@+id/close_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_back__1_"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+                    <View
+                        android:id="@+id/barrierView"
+                        android:layout_width="35dp"
+                        android:layout_marginStart="35dp"
+                        android:background="@color/app_red"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/close_icon"
+                        android:layout_height="5dp"/>
+
+                    <TextView
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:id="@+id/search"
+                        android:layout_marginEnd="26dp"
+                        app:layout_constraintStart_toStartOf="@id/barrierView"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:alpha=".6"
+                        android:background="@drawable/greybackground"
+                        android:drawableLeft="@drawable/ic_search"
+                        android:drawablePadding="@dimen/margin12dp"
+                        android:padding="@dimen/margin12dp"
+                        android:paddingLeft="20dp"
+                        android:text="Search Business "
+                        android:textColor="#6F7070"
+                        android:textSize="10sp"
+
+                        tools:layout_editor_absoluteX="110dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/all_tv"
+            style="@style/makepaymentroundedtextviewstyle"
+            android:background="@drawable/roundedcorner"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="All"
+            app:layout_constraintEnd_toStartOf="@id/hotels_tv"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbarlayout" />
+
+        <TextView
+            android:id="@+id/hotels_tv"
+            android:paddingRight="13dp"
+            android:paddingLeft="13dp"
+            style="@style/makepaymentroundedtextviewstyle"
+            android:layout_width="wrap_content"
+            android:background="@drawable/roundedcorner"
+            android:text="Hotels"
+            app:layout_constraintEnd_toStartOf="@+id/safari_tv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/all_tv"
+            app:layout_constraintTop_toBottomOf="@id/appbarlayout" />
+
+        <TextView
+            android:id="@+id/safari_tv"
+            android:paddingRight="13dp"
+            android:paddingLeft="13dp"
+            style="@style/makepaymentroundedtextviewstyle"
+            android:layout_width="wrap_content"
+            android:background="@drawable/roundedcorner"
+            android:text="Safari"
+            app:layout_constraintEnd_toStartOf="@+id/partners_tv"
+
+            app:layout_constraintStart_toEndOf="@+id/hotels_tv"
+            app:layout_constraintTop_toBottomOf="@id/appbarlayout" />
+
+        <TextView
+            android:id="@+id/partners_tv"
+            style="@style/makepaymentroundedtextviewstyle"
+            android:layout_width="wrap_content"
+            android:background="@drawable/roundedcorner"
+            android:text="Partners"
+            android:layout_marginEnd="20dp"
+            android:paddingRight="13dp"
+            android:paddingLeft="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/safari_tv"
+            app:layout_constraintTop_toBottomOf="@id/appbarlayout"
+            android:layout_marginRight="20dp" />
+
+        <TextView
+            android:background="@color/app_red"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_dialpad"
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="57dp"
+            android:paddingLeft="15dp"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="24dp"
+            android:textSize="12sp"
+            android:text="Enter bill number"
+            app:layout_constraintEnd_toEndOf="@+id/partners_tv"
+            app:layout_constraintStart_toStartOf="@+id/all_tv"
+            app:layout_constraintTop_toBottomOf="@+id/hotels_tv" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imageView8"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2"
+            android:layout_width="91dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_marginRight="12dp"
+            android:layout_marginEnd="12dp"
+            app:cardCornerRadius="5dp"
+
+            android:layout_height="83dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="35dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#E4E4E4"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/categoryIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:src="@drawable/ic_arts"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/categoryTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scan QR CODE"
+                    android:textSize="8sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/categoryIcon" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+      <!--  <ImageView
+            android:background="@drawable/greybackground"
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/ic_savings_account"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button2" />-->
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Merchants"
+            app:layout_constraintStart_toStartOf="@+id/button2"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See all"
+            android:textColor="#D41E0F"
+            app:layout_constraintEnd_toEndOf="@+id/button2"
+            app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/merchantsrv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout></ScrollView>

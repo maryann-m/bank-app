@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.ekenya.rnd.etourism.ui.home.HomeFragment"
+        android:label="@string/discover"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_personalTripsFragment"
+            app:destination="@id/personalTripsFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_bibleKenyaFragment"
+            app:destination="@id/bibleKenyaFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_virtualSafariFragment"
+            app:destination="@id/virtualSafariFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_singleTripFragment"
+            app:destination="@id/singleTripFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_myBagFragment"
+            app:destination="@id/myBagFragment" />
+        <action
+            android:id="@+id/action_navigation_home_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.ekenya.rnd.etourism.ui.shop.ShopFragment"
+        android:label="@string/shop"
+        tools:layout="@layout/fragment_shop" >
+        <action
+            android:id="@+id/action_navigation_dashboard_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.ekenya.rnd.etourism.ui.wallet.NotificationsFragment"
+        android:label="@string/wallet"
+        tools:layout="@layout/fragment_wallet" >
+
+        <action
+            android:id="@+id/action_navigation_notifications_to_intermediateFragment"
+            app:destination="@id/intermediateFragment" />
+        <action
+            android:id="@+id/action_navigation_notifications_to_pinFragment"
+            app:destination="@id/pinFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalTripsFragment"
+        android:name="com.ekenya.rnd.etourism.ui.home.personaltrips.PersonalTripsFragment"
+        android:label="PersonalTripsFragment" >
+        <action
+            android:id="@+id/action_personalTripsFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_personalTripsFragment_to_singleTripFragment"
+            app:destination="@id/singleTripFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bibleKenyaFragment"
+        android:name="com.ekenya.rnd.etourism.ui.home.learnkenya.BibleKenyaFragment"
+        android:label="bible_kenya_fragment"
+        tools:layout="@layout/bible_kenya_fragment" >
+        <action
+            android:id="@+id/action_bibleKenyaFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.ekenya.rnd.etourism.ui.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" >
+        <action
+            android:id="@+id/action_navigation_profile_to_accountSettingsFragment"
+            app:destination="@id/accountSettingsFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_registeredUserFragment"
+            app:destination="@id/registeredUserFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_newUserFragment"
+            app:destination="@id/newUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/virtualSafariFragment"
+        android:name="com.ekenya.rnd.etourism.ui.home.virtualsafari.VirtualSafariFragment"
+        android:label="virtual_safari_fragment"
+        tools:layout="@layout/virtual_safari_fragment" >
+        <action
+            android:id="@+id/action_virtualSafariFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/makePayments"
+        android:name="com.ekenya.rnd.etourism.ui.wallet.makepayments.MakePaymentsFragment"
+        android:label="make_payments_fragment"
+        tools:layout="@layout/make_payments_fragment" >
+        <action
+            android:id="@+id/action_makePayments_to_intermediateFragment"
+            app:destination="@id/intermediateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/topUpFragment"
+        android:name="com.ekenya.rnd.etourism.ui.wallet.topupwallet.TopUpFragment"
+        android:label="top_up_fragment"
+        tools:layout="@layout/top_up_fragment" >
+        <action
+            android:id="@+id/action_topUpFragment_to_mpesaFragment"
+            app:destination="@id/mpesaFragment" />
+        <action
+            android:id="@+id/action_topUpFragment_to_airtelFragment"
+            app:destination="@id/airtelFragment" />
+        <action
+            android:id="@+id/action_topUpFragment_to_bankCardsFragment"
+            app:destination="@id/bankCardsFragment" />
+        <action
+            android:id="@+id/action_topUpFragment_to_pesaLinkFragment"
+            app:destination="@id/pesaLinkFragment" />
+        <action
+            android:id="@+id/action_topUpFragment_to_intermediateFragment"
+            app:destination="@id/intermediateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mpesaFragment"
+        android:name="com.ekenya.rnd.etourism.ui.wallet.mpesa.MpesaFragment"
+        android:label="MpesaFragment" >
+        <action
+            android:id="@+id/action_mpesaFragment_to_topUpFragment"
+            app:destination="@id/topUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/airtelFragment"
+        android:name="com.ekenya.rnd.etourism.ui.wallet.airtel.AirtelFragment"
+        android:label="AirtelFragment" >
+        <action
+            android:id="@+id/action_airtelFragment_to_topUpFragment"
+            app:destination="@id/topUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bankCardsFragment"
+        android:name="com.ekenya.rnd.etourism.ui.wallet.bankcards.BankCardsFragment"
+        android:label="BankCardsFragment" >
+        <action
+            android:id="@+id/action_bankCardsFragment_to_topUpFragment"
+            app:destination="@id/topUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pesaLinkFragment"
+        android:name="com.ekenya.rnd.etourism.ui.wallet.pesalink.PesaLinkFragment"
+        android:label="PesaLinkFragment" >
+        <action
+            android:id="@+id/action_pesaLinkFragment_to_topUpFragment"
+            app:destination="@id/topUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleTripFragment"
+        android:name="com.ekenya.rnd.etourism.ui.home.destination.SingleTripFragment"
+        android:label="SingleTripFragment" >
+        <action
+            android:id="@+id/action_singleTripFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_singleTripFragment_to_personalTripsFragment"
+            app:destination="@id/personalTripsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myBagFragment"
+        android:name="com.rnd.core.ui.home.cart.MyBagFragment"
+        android:label="MyBagFragment" >
+        <action
+            android:id="@+id/action_myBagFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/intermediateFragment"
+        android:name="com.ekenya.rnd.etourism.ui.wallet.intermediate.IntermediateFragment"
+        android:label="IntermediateFragment" >
+        <action
+            android:id="@+id/action_intermediateFragment_to_savingsAccountFragment"
+            app:destination="@id/savingsAccountFragment" />
+        <action
+            android:id="@+id/action_intermediateFragment_to_getStatementFragment"
+            app:destination="@id/getStatementFragment" />
+        <action
+            android:id="@+id/action_intermediateFragment_to_topUpFragment"
+            app:destination="@id/topUpFragment" />
+        <action
+            android:id="@+id/action_intermediateFragment_to_makePayments"
+            app:destination="@id/makePayments" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinFragment"
+        android:name="com.ekenya.rnd.etourism.ui.wallet.pin.PinFragment"
+        android:label="PinFragment" >
+        <action
+            android:id="@+id/action_pinFragment_to_intermediateFragment"
+            app:destination="@id/intermediateFragment" />
+        <action
+            android:id="@+id/action_pinFragment_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.ekenya.rnd.etourism.ui.shop.shopitemdetail.ItemDetailFragment"
+        android:label="ItemDetailFragment" >
+        <action
+            android:id="@+id/action_itemDetailFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountSettingsFragment"
+        android:name="com.ekenya.rnd.etourism.ui.profile.accountsettings.AccountSettingsFragment"
+        android:label="account_settings_fragment"
+        tools:layout="@layout/accountsettings" >
+        <action
+            android:id="@+id/action_accountSettingsFragment_to_navigation_profile"
+            app:destination="@id/navigation_profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/registeredUserFragment"
+        android:name="com.ekenya.rnd.etourism.ui.profile.registereduser.RegisteredUserFragment"
+        android:label="registered_user_fragment"
+        tools:layout="@layout/registered_user_fragment" />
+    <fragment
+        android:id="@+id/newUserFragment"
+        android:name="com.ekenya.rnd.etourism.ui.profile.newuser.NewUserFragment"
+        android:label="new_user_fragment"
+        tools:layout="@layout/new_user_fragment" />
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.ekenya.rnd.etourism.ui.home.message.MessagesFragment"
+        android:label="MessagesFragment" >
+        <action
+            android:id="@+id/action_messagesFragment_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/getStatementFragment"
+        android:name="com.ekenya.rnd.etourism.ui.wallet.statements.GetStatementFragment"
+        android:label="get_statement_fragment"
+        tools:layout="@layout/get_statement_fragment" >
+        <action
+            android:id="@+id/action_getStatementFragment_to_intermediateFragment"
+            app:destination="@id/intermediateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savingsAccountFragment"
+        android:name="com.ekenya.rnd.etourism.ui.wallet.savings.SavingsAccountFragment"
+        android:label="SavingsAccountFragment" >
+        <action
+            android:id="@+id/action_savingsAccountFragment_to_intermediateFragment"
+            app:destination="@id/intermediateFragment" />
+    </fragment>
+
+</navigation>

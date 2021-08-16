@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    style="@style/rootviewStyle"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            android:id="@+id/appbarlayout"
+            style="@style/Appbarstyle"
+            android:layout_marginTop="15dp"
+            app:elevation="0dp"
+            >
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/lKenyatoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:contentDescription="@string/back_icon"
+                        android:id="@+id/profile_image"
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/lucas"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/welcome_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/welcomebacktxt"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/profile_image"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:contentDescription="@string/search"
+                        android:id="@+id/search"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_search"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/message"
+                        app:layout_constraintStart_toEndOf="@id/welcome_tv"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:contentDescription="@string/message"
+                        android:id="@+id/message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_message_2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/bag"
+                        app:layout_constraintStart_toEndOf="@id/search"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:contentDescription="@string/bag"
+                        android:id="@+id/bag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:src="@drawable/ic_bag"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/message"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:id="@+id/dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_pager"></LinearLayout>
+
+        <TextView
+            android:id="@+id/personaltrips_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/personal_trips"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recyclerView" />
+
+        <TextView
+            android:id="@+id/upcomingTrips_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin12dp"
+            android:layout_marginTop="18dp"
+            android:text="@string/upcoming_trips"
+
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dots" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin12dp"
+            android:padding="8dp"
+
+            android:text="@string/view_calender"
+            android:textSize="@dimen/textsize_10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/upcomingTrips_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:strokeColor="@color/app_red" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin12dp"
+            android:layout_marginLeft="@dimen/margin12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/margin12dp"
+            android:layout_marginRight="@dimen/margin12dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="@id/recyclerView"
+
+            app:layout_constraintStart_toStartOf="@id/recyclerView"
+            app:layout_constraintTop_toBottomOf="@id/personaltrips_tv">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp">
+
+                <ImageView
+                    android:contentDescription="@string/add_icon"
+                    android:id="@+id/add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+
+                    android:src="@drawable/ic_baseline_create_new_folder_24"
+                    app:layout_constraintBottom_toBottomOf="@id/personaltriptx"
+                    app:layout_constraintEnd_toStartOf="@+id/personaltriptx"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/personaltriptx" />
+
+                <TextView
+                    android:id="@+id/personaltriptx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/plan_your_own_trips_and_get_professional_n_guides_and_tips"
+
+
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/add"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:contentDescription="@string/car_icon"
+                    android:id="@+id/imageView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/ic_travel"
+                    app:layout_constraintBottom_toBottomOf="@id/personaltriptx"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/personaltriptx"
+                    app:layout_constraintTop_toTopOf="@id/personaltriptx" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/learn_kenya_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="22dp"
+            android:text="@string/learnkenya"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+        <Button
+            android:id="@+id/learnKenya_btn"
+            style="@style/button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/open_kenyan_bible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/virtualsafaribtn"
+            app:layout_constraintTop_toBottomOf="@+id/learn_kenya_tv" />
+
+        <TextView
+            android:id="@+id/explore_safari_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="@string/explore_virtual_safari_small"
+
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/virtualsafaribtn"
+            app:layout_constraintTop_toBottomOf="@+id/learnKenya_btn" />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="wrap_content"
+            android:layout_height="187dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginRight="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbarlayout">
+
+
+        </androidx.viewpager.widget.ViewPager>
+
+        <TextView
+            android:id="@+id/regionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:text="@string/mara_serena"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@id/date"
+            app:layout_constraintStart_toStartOf="@id/view_pager" />
+
+        <TextView
+            android:id="@+id/tripTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maasai_mara_national_park"
+            android:textColor="@color/white"
+
+
+            android:textSize="@dimen/textsize_10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/view_pager"
+            app:layout_constraintStart_toStartOf="@id/regionTitle"
+            app:layout_constraintTop_toTopOf="@id/date" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/date"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_10sp"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/virtualsafaribtn"
+            style="@style/button_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="100dp"
+            android:text="@string/explore_virtual_safari_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/explore_safari_tv" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

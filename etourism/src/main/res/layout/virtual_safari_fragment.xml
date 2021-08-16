@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    style="@style/rootviewStyle">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:elevation="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                android:id="@+id/lKenyatoolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/close_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_time" />
+            </androidx.appcompat.widget.Toolbar>
+
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="149dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+                app:showFullScreenButton="false"
+                app:showYouTubeButton="true"
+
+            android:layout_marginEnd="16dp"
+
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/maracamptv"
+            app:layout_constraintTop_toBottomOf="@+id/lKenyatoolbar" />
+
+        <TextView
+            android:id="@+id/maracamptv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/mara_camp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/videoView" />
+
+        <TextView
+            android:id="@+id/maracampnarration_tv"
+            android:layout_width="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            android:text="But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete."
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@id/liveSafarisRv"
+            app:layout_constraintStart_toStartOf="@+id/maracamptv"
+            app:layout_constraintTop_toBottomOf="@+id/maracamptv" />
+
+        <TextView
+            android:id="@+id/livesafaritv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Live Safari’s"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/maracampnarration_tv"
+            app:layout_constraintTop_toBottomOf="@+id/maracampnarration_tv" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/liveSafarisRv"
+            android:layout_width="0dp"
+            android:layout_height="146dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView3"
+            app:layout_constraintTop_toBottomOf="@+id/livesafaritv" />
+
+        <TextView
+            android:id="@+id/gallerytv"
+            android:layout_width="46dp"
+            android:layout_height="17dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/gallery"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/livesafaritv"
+            app:layout_constraintTop_toBottomOf="@+id/liveSafarisRv" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/galleryRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/gallerytv"
+            app:layout_constraintTop_toBottomOf="@id/gallerytv"
+            tools:layout_editor_absoluteX="56dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_add__1_"
+            app:layout_constraintBottom_toBottomOf="@+id/liveSafarisRv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/liveSafarisRv" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout></ScrollView>

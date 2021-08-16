@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+        app:elevation="0dp"
+        android:layout_marginTop="22dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
+
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/lKenyatoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:contentDescription="@string/shop_item_image"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/close_icon"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_back__1_"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="#707070"
+                    android:textSize="@dimen/textsize_8sp"
+                    android:layout_width="wrap_content"
+                    android:text="@string/_1_4"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/itemImage"
+        android:contentDescription="@string/shop_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appbarlayout"
+        app:srcCompat="@drawable/shopitem" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="16dp"
+        android:background="#E4E4E4"
+        app:layout_constraintTop_toBottomOf="@+id/itemImage"
+        tools:layout_editor_absoluteX="32dp" />
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:id="@+id/itemtitle"
+            android:textStyle="bold"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/ideas_influence_and_income"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+    <ImageView
+        android:id="@+id/shareicon"
+        android:contentDescription="@string/share_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/itemtitle"
+        app:layout_constraintEnd_toStartOf="@+id/bookmarkicon"
+        app:layout_constraintTop_toTopOf="@+id/itemtitle"
+        android:src="@drawable/ic_baseline_share_24" />
+
+    <ImageView
+        android:id="@+id/bookmarkicon"
+        android:contentDescription="@string/bookmark_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/shareicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/shareicon"
+        android:src="@drawable/ic_baseline_bookmark_border_24" />
+
+    <TextView
+        android:id="@+id/authorname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/by_tanya_hall"
+        android:textColor="#707070"
+        android:textSize="@dimen/textsize_10sp"
+        app:layout_constraintStart_toStartOf="@+id/itemtitle"
+        app:layout_constraintTop_toBottomOf="@+id/itemtitle" />
+
+        <TextView
+            android:id="@+id/textView52"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/itemtitle"
+            app:layout_constraintTop_toBottomOf="@+id/authorname" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:background="#E4E4E4"
+        app:layout_constraintTop_toBottomOf="@+id/textView52"
+        tools:layout_editor_absoluteX="5dp" />
+
+    <TextView
+        android:id="@+id/itemDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/description"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView52"
+        app:layout_constraintTop_toBottomOf="@+id/view9" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/but_i_must_explain_to_you_how_all_this_mistaken_idea_of_denouncing_pleasure_and_praising_pain_was_born_and_i_will_give_you_a_complete_account_of_the_system_and_expound_the_actual_teachings_of_the_great_explorer_of_the_truth_the_master_builder_of_human_happiness_no_one_rejects_dislikes_or_avoids_pleasure_itself_because_it_is_pleasure_but_because_those_who_do_not_know_how_to_pursue_pleasure_rationally_encounter_consequences_that_are_extremely_painful_nor_again_is_there_anyone_who_loves_or_pursues_or_desires_to_obtain_pain_of_itself_because_it_is_pain_but_because_occasionally_circumstances_occur_in_which_toil_and_pain_can_procure_him_some_great_pleasure_to_take_a_trivial_example_which_of_us_ever_undertakes_laborious"
+        android:textColor="#6C6C6C"
+        android:textSize="@dimen/textsize_10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/itemDescription"
+        app:layout_constraintTop_toBottomOf="@+id/itemDescription" />
+
+    <ImageView
+        android:contentDescription="@string/ratingbar"
+        android:id="@+id/imageView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textView52"
+        app:layout_constraintEnd_toEndOf="@+id/bookmarkicon"
+        app:layout_constraintTop_toTopOf="@+id/textView52"
+        android:src="@drawable/ic_high_ratings" />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="@string/_4_2"
+        app:layout_constraintBottom_toBottomOf="@+id/textView52"
+        app:layout_constraintEnd_toStartOf="@+id/imageView39"
+        app:layout_constraintTop_toTopOf="@+id/textView52" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="16dp"
+        android:background="#E4E4E4"
+        app:layout_constraintTop_toBottomOf="@+id/textView54"
+        tools:layout_editor_absoluteX="18dp" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/textView56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/related_products"
+        app:layout_constraintStart_toStartOf="@+id/textView54"
+        app:layout_constraintTop_toBottomOf="@+id/view10" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/relatedproductsrv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView56"
+            tools:layout_editor_absoluteX="1dp" />
+
+        <Button
+            android:id="@+id/checkoutbtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/checkout"
+            android:layout_margin="@dimen/margin12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/relatedproductsrv" />
+
+        <TextView
+            android:id="@+id/textView57"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/already_added_to_bag"
+            android:textColor="#50B748"
+            android:textSize="@dimen/textsize_10sp"
+            app:layout_constraintEnd_toEndOf="@+id/checkoutbtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/checkoutbtn"
+            app:layout_constraintTop_toBottomOf="@+id/checkoutbtn"
+            app:drawableStartCompat="@drawable/ic_greencheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
