@@ -1,11 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/checkoutprocess_navigation"
     app:startDestination="@id/deliveryAddressFragment">
 
     <fragment
         android:id="@+id/deliveryAddressFragment"
         android:name="com.ekenya.rnd.etourism.ui.home.cart.checkout.address.DeliveryAddressFragment"
-        android:label="DeliveryAddressFragment" />
+        android:label="DeliveryAddressFragment" >
+        <action
+            android:id="@+id/action_deliveryAddressFragment_to_paymentsStepFragment"
+            app:destination="@id/paymentsStepFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentsStepFragment"
+        android:name="com.ekenya.rnd.etourism.ui.home.cart.checkout.payments.PaymentsStepFragment"
+        android:label="payments_step_fragment"
+        tools:layout="@layout/payments_step_fragment" >
+        <action
+            android:id="@+id/action_paymentsStepFragment_to_summaryFragment"
+            app:destination="@id/summaryFragment" />
+        <action
+            android:id="@+id/action_paymentsStepFragment_to_deliveryAddressFragment"
+            app:destination="@id/deliveryAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/summaryFragment"
+        android:name="com.ekenya.rnd.etourism.ui.home.cart.checkout.summary.SummaryFragment"
+        android:label="summary_fragment"
+        tools:layout="@layout/summary_fragment" >
+        <action
+            android:id="@+id/action_summaryFragment_to_paymentsStepFragment"
+            app:destination="@id/paymentsStepFragment" />
+    </fragment>
 </navigation>

@@ -6,15 +6,28 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import com.ekenya.rnd.etourism.R
+import com.ekenya.rnd.etourism.databinding.DeliveryAddressFragmentBinding
+import com.ekenya.rnd.etourism.databinding.MyBagFragmentBinding
 import com.ekenya.rnd.etourism.ui.home.cart.checkout.payments.PaymentsStepFragment
 
 
 class DeliveryAddressFragment : Fragment() {
 
-        companion object {
-            fun newInstance() = PaymentsStepFragment()
-        }
+    private var _binding: DeliveryAddressFragmentBinding? = null
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+    }
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
 
     private lateinit var viewModel: DeliveryAddressViewModel
 
@@ -22,13 +35,19 @@ class DeliveryAddressFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.delivery_address_fragment, container, false)
+        _binding = DeliveryAddressFragmentBinding.inflate(inflater,container,false)
+        binding.proceedbtn.setOnClickListener{
+            Navigation.findNavController(it).navigate(R.id.action_deliveryAddressFragment_to_paymentsStepFragment)
+        }
+
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(DeliveryAddressViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+
+
     }
 
 }

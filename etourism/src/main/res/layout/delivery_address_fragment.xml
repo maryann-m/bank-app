@@ -80,7 +80,7 @@
 
 
         <Button
-            android:id="@+id/getquotation_btn"
+            android:id="@+id/proceedbtn"
             style="@style/button_style"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
