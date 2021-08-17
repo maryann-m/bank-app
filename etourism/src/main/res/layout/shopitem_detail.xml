@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -129,6 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:text="@string/ksh_2_500"
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/itemtitle"
@@ -216,30 +225,8 @@
             app:layout_constraintTop_toBottomOf="@+id/textView56"
             tools:layout_editor_absoluteX="40dp" />
 
-        <Button
-            android:id="@+id/checkoutbtn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/checkout"
-            android:layout_margin="@dimen/margin12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/relatedproductsrv" />
 
-        <TextView
-            android:id="@+id/textView57"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:text="@string/already_added_to_bag"
-            android:textColor="#50B748"
-            android:textSize="@dimen/textsize_10sp"
-            app:layout_constraintEnd_toEndOf="@+id/checkoutbtn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/checkoutbtn"
-            app:layout_constraintTop_toBottomOf="@+id/checkoutbtn"
-            app:drawableStartCompat="@drawable/ic_greencheck" />
+
 
         <ImageView
             android:id="@+id/imageView17"
@@ -251,4 +238,15 @@
             app:srcCompat="@drawable/ic_chevron_right" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/addtobagbtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_to_bag"
+        android:layout_margin="@dimen/margin12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

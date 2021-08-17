@@ -214,6 +214,9 @@
         <action
             android:id="@+id/action_itemDetailFragment_to_navigation_dashboard"
             app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_itemDetailFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
     </fragment>
     <fragment
         android:id="@+id/accountSettingsFragment"
@@ -258,6 +261,26 @@
         <action
             android:id="@+id/action_savingsAccountFragment_to_intermediateFragment"
             app:destination="@id/intermediateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.ekenya.rnd.etourism.ui.home.cart.checkout.CheckoutFragment"
+        android:label="CheckoutFragment" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_trackOrderFragment"
+            app:destination="@id/trackOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trackOrderFragment"
+        android:name="com.ekenya.rnd.etourism.ui.home.cart.trackorder.TrackOrderFragment"
+        android:label="track_order_fragment"
+        tools:layout="@layout/track_order_fragment" >
+        <action
+            android:id="@+id/action_trackOrderFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
     </fragment>
 
 </navigation>

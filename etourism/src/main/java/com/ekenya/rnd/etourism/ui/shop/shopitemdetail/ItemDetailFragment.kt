@@ -8,9 +8,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ekenya.rnd.common.abstractions.BaseDaggerFragment
+import com.ekenya.rnd.etourism.R
 import com.ekenya.rnd.etourism.adapters.ShopAdapter
 import com.ekenya.rnd.etourism.databinding.ShopitemDetailBinding
 import com.ekenya.rnd.etourism.models.ShopItem
@@ -56,6 +58,10 @@ class ItemDetailFragment : BaseDaggerFragment() {
         shopItemsRecyvlerview.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
         val shopItems:List<ShopItem> = AppData().getShopItemsList()
         shopItemsRecyvlerview.adapter = ShopAdapter(shopItems)
+
+        binding.addtobagbtn.setOnClickListener{
+            Navigation.findNavController(it).navigate(R.id.action_itemDetailFragment_to_checkoutFragment)
+        }
 
 
 

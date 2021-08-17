@@ -10,13 +10,13 @@ import com.ekenya.rnd.common.abstractions.BaseDaggerFragment
 import com.ekenya.rnd.etourism.R
 import javax.inject.Inject
 
-class TrackOrderFragment : BaseDaggerFragment() {
+class TrackOrderFragment : Fragment() {
 
     companion object {
         fun newInstance() = TrackOrderFragment()
     }
 
-    @Inject
+
 
       var viewModel: TrackOrderViewModel? = null
 
