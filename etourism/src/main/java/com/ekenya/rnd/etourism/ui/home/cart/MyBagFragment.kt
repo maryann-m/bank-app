@@ -1,4 +1,4 @@
-package com.rnd.core.ui.home.cart
+package com.ekenya.rnd.etourism.ui.home.cart
 
 import android.os.Build
 import androidx.lifecycle.ViewModelProvider

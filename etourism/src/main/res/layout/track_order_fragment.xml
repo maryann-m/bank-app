@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.cart.trackorder.TrackOrderFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/lKenyatoolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/close_icon"
+                    android:layout_width="8dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_back__1_"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:layout_marginStart="16dp"
+                    android:id="@+id/deliveryaddressstep"
+                    style="@style/horizontalstepstyle"
+                    android:layout_marginTop="@dimen/margin12dp"
+                    android:background="@drawable/stepsbackground"
+                    app:layout_constraintEnd_toStartOf="@+id/Paymentsstep"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/close_icon" />
+
+                <View
+                    android:id="@+id/Paymentsstep"
+                    style="@style/horizontalstepstyle"
+                    android:layout_marginTop="@dimen/margin12dp"
+                    android:background="@drawable/stepsbackground"
+                    app:layout_constraintEnd_toStartOf="@+id/summarystep"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/deliveryaddressstep"
+                    app:layout_constraintTop_toBottomOf="@id/close_icon" />
+
+                <View
+                    android:id="@+id/summarystep"
+                    android:layout_marginEnd="16dp"
+                    style="@style/horizontalstepstyle"
+                    android:layout_marginTop="@dimen/margin12dp"
+                    android:background="@drawable/stepsbackground"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/Paymentsstep"
+                    app:layout_constraintTop_toBottomOf="@id/close_icon" />
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+
+
+                    android:background="@color/app_red"
+                    app:layout_constraintBottom_toBottomOf="@id/deliveryaddressstep"
+                    app:layout_constraintEnd_toStartOf="@+id/Paymentsstep"
+                    app:layout_constraintStart_toEndOf="@id/deliveryaddressstep"
+                    app:layout_constraintTop_toTopOf="@id/deliveryaddressstep" />
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="0dp"
+                    android:layout_height="2dp"
+
+
+                    android:background="@color/app_grey"
+                    app:layout_constraintBottom_toBottomOf="@id/deliveryaddressstep"
+                    app:layout_constraintEnd_toStartOf="@+id/summarystep"
+                    app:layout_constraintStart_toEndOf="@id/Paymentsstep"
+                    app:layout_constraintTop_toTopOf="@id/deliveryaddressstep" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+<fragment
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/appbarlayout"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

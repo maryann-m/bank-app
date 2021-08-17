@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.cart.checkout.summary.SummaryFragment">
+
+    <TextView
+        android:id="@+id/deliveryadrress_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/deliveryaddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Nairobi,Kenya  \n Gigiri Warwick center \n \n Lifestyle Center Gigiri \n Av 208"
+        app:layout_constraintStart_toStartOf="@+id/deliveryadrress_tv"
+        app:layout_constraintTop_toBottomOf="@+id/deliveryadrress_tv" />
+
+    <View
+        android:id="@+id/view13"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/app_grey"
+        app:layout_constraintTop_toBottomOf="@+id/textView53"
+        tools:layout_editor_absoluteX="25dp" />
+
+    <TextView
+        android:id="@+id/paymentmethods_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Payment Methods"
+        app:layout_constraintStart_toStartOf="@+id/textView53"
+        app:layout_constraintTop_toBottomOf="@+id/view13" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/paymentmethods_tv"
+        app:layout_constraintTop_toBottomOf="@+id/paymentmethods_tv">
+
+        <RadioButton
+            android:layout_margin="16dp"
+            android:drawableRight="@drawable/ic_visa_credit_card"
+            android:padding="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/bankcard" />
+
+        <RadioButton
+            android:layout_margin="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="24dp"
+            android:background="@drawable/rounded_corner"
+            android:drawableRight="@drawable/ic_mpesa_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mobile_Money" />
+
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

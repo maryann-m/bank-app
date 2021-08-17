@@ -106,5 +106,16 @@
     <string name="car_icon">car icon</string>
     <string name="mara_serena">MARA SERENA</string>
     <string name="date">12/12/2014</string>
+    <string name="proceed">PROCEED</string>
+    <string name="mobilenumber">Mobile Number</string>
+    <string name="choose_country">Choose Country</string>
+    <string name="country">Country</string>
+    <string name="location">Location</string>
+    <string name="choose_area">Choose  Area</string>
+    <string name="deliveryaddress">Delivery Address</string>
+    <string name="items">Items</string>
+    <string name="voucher">Voucher</string>
+    <string name="bankcard">Bank Card</string>
+    <string name="mobile_Money">Mobile Money</string>
 
 </resources>

@@ -173,7 +173,7 @@
     </fragment>
     <fragment
         android:id="@+id/myBagFragment"
-        android:name="com.rnd.core.ui.home.cart.MyBagFragment"
+        android:name="com.ekenya.rnd.etourism.ui.home.cart.MyBagFragment"
         android:label="MyBagFragment" >
         <action
             android:id="@+id/action_myBagFragment_to_navigation_home"

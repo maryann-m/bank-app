@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.home.cart.checkout.payments.PaymentsStepFragment">
+
+    <TextView
+        android:id="@+id/items_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="16dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text="@string/items"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_items_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/items_tv"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <View
+        android:id="@+id/view11"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/app_grey"
+        app:layout_constraintTop_toBottomOf="@+id/cart_items_rv"
+        tools:layout_editor_absoluteX="51dp" />
+
+    <TextView
+        android:id="@+id/promo_code_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Promo Code"
+
+        app:layout_constraintStart_toStartOf="@+id/items_tv"
+        app:layout_constraintTop_toBottomOf="@+id/view11" />
+
+    <Button
+        android:id="@+id/use_voucher_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="USE VOUCHER"
+
+        app:layout_constraintBottom_toBottomOf="@+id/promocodetil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/promocodetil" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/promocodetil"
+        style="@style/OutlinedTextField_style"
+
+        android:layout_width="0dp"
+
+
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+
+        android:hint="@string/voucher"
+        app:layout_constraintEnd_toStartOf="@+id/use_voucher_btn"
+        app:layout_constraintStart_toStartOf="@id/promo_code_tv"
+        app:layout_constraintTop_toBottomOf="@+id/promo_code_tv">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/view12"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/app_grey"
+        app:layout_constraintTop_toBottomOf="@+id/promocodetil" />
+
+    <TextView
+        android:id="@+id/textView59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Total"
+        app:layout_constraintStart_toStartOf="@+id/promo_code_tv"
+        app:layout_constraintTop_toBottomOf="@+id/view12" />
+
+    <TextView
+        android:id="@+id/textView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ksh_112_800_00"
+        app:layout_constraintEnd_toEndOf="@+id/use_voucher_btn"
+        app:layout_constraintTop_toTopOf="@+id/textView59" />
+
+    <Button
+        android:id="@+id/btn_checkout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="31dp"
+        android:text="@string/checkout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
