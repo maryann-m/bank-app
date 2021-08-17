@@ -117,5 +117,6 @@
     <string name="voucher">Voucher</string>
     <string name="bankcard">Bank Card</string>
     <string name="mobile_Money">Mobile Money</string>
+    <string name="select_destination">Select Destination</string>
 
 </resources>
