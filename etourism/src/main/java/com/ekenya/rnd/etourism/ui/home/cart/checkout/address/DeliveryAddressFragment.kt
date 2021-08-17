@@ -7,12 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.ekenya.rnd.etourism.R
+import com.ekenya.rnd.etourism.ui.home.cart.checkout.payments.PaymentsStepFragment
 
 
-    companion object {class DeliveryAddressFragment : Fragment() {
+class DeliveryAddressFragment : Fragment() {
 
-        fun newInstance() = DeliveryAddressFragment()
-    }
+        companion object {
+            fun newInstance() = PaymentsStepFragment()
+        }
 
     private lateinit var viewModel: DeliveryAddressViewModel
 
