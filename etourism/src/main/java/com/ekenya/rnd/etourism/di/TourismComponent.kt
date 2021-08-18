@@ -6,6 +6,7 @@ import com.ekenya.rnd.baseapp.di.injectables.ViewModelModule
 import com.ekenya.rnd.etourism.di.injectables.ContextModule
 import com.ekenya.rnd.etourism.di.injectables.TourismActivityModule
 import com.ekenya.rnd.etourism.di.injectables.TourismFragmentModule
+import com.ekenya.rnd.etourism.ui.AppData
 import dagger.Component
 import dagger.android.support.AndroidSupportInjectionModule
 
@@ -19,7 +20,8 @@ import dagger.android.support.AndroidSupportInjectionModule
         TourismActivityModule::class,
         TourismFragmentModule::class,
         ViewModelModule::class,
-        ContextModule::class
+        ContextModule::class,
+        //AppData::class
     ]
 )
 interface TourismComponent {

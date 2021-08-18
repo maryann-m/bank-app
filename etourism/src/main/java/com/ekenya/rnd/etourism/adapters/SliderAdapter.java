@@ -16,12 +16,14 @@ import com.ekenya.rnd.etourism.models.SliderImage;
 
 import java.util.List;
 
+import javax.inject.Inject;
+
 
 public class SliderAdapter extends PagerAdapter {
     private Context context;
     private List<SliderImage> images;
 
-
+    @Inject
     public SliderAdapter  (Context context, List<SliderImage> images) {
         this.context = context;
         this.images = images;

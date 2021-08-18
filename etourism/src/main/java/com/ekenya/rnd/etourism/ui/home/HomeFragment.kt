@@ -27,6 +27,8 @@ class HomeFragment : BaseDaggerFragment() {
 
     private var homeViewModel: HomeViewModel? = null
     private var _binding: FragmentHomeBinding? = null
+  //  @Inject
+    //lateinit var sliderAdapter:SliderAdapter
 
     private val binding get() = _binding!!
 
