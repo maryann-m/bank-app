@@ -60,7 +60,7 @@ class ShopFragment : BaseDaggerFragment() {
         shopItemsRecyvlerview.adapter = ShopAdapter(shopItems)
         val sliderAdapter = SliderAdapter(
             context,
-            AppData().getSliderImages()
+            AppData()
         )
         binding.shopViewPager.adapter = sliderAdapter
         dotsLayout = binding.dots

@@ -1,13 +1,13 @@
 package com.ekenya.rnd.etourism.ui
 
+import com.ekenya.rnd.baseapp.di.ModuleScope
 import com.ekenya.rnd.etourism.R
 import com.ekenya.rnd.etourism.models.*
 import dagger.Module
 import dagger.Provides
+import javax.inject.Inject
 
-//@Module
-class AppData() {
-
+class AppData @Inject constructor() {
 
     public fun getTripList(): List<UpcomingTrip> {
 
@@ -21,7 +21,7 @@ class AppData() {
 
 
     }
-//@Provides
+
     public fun getImages(): MutableList<SliderImage> {
         val images= ArrayList<SliderImage>()
         images.add(SliderImage(R.drawable.cinthia))

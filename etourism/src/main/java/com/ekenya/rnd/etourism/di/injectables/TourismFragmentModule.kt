@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.viewpager.widget.PagerAdapter
 import com.ekenya.rnd.baseapp.di.ViewModelKey
 import com.ekenya.rnd.etourism.adapters.SliderAdapter
+import com.ekenya.rnd.etourism.ui.AppData
 import com.ekenya.rnd.etourism.ui.dashboard.DashboardFragment
 import com.ekenya.rnd.etourism.ui.dashboard.DashboardViewModel
 import com.ekenya.rnd.etourism.ui.home.HomeFragment
@@ -79,12 +80,10 @@ abstract class TourismFragmentModule {
     @Module
      class TourismHomeSliderFragmentModule {
 
-
         @Provides
          fun providesAdapter(adapter: SliderAdapter?): PagerAdapter? {
             return adapter
         }
-
 
     }
     @ContributesAndroidInjector(modules = [TourismProfileFragmentModule::class])

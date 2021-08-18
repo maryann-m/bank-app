@@ -32,6 +32,8 @@ class HomeFragment : BaseDaggerFragment() {
 
     private val binding get() = _binding!!
 
+    @Inject
+    lateinit var sliderAdapter: SliderAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -56,10 +58,10 @@ class HomeFragment : BaseDaggerFragment() {
         addDots(0)
         binding.viewPager.addOnPageChangeListener(changeListener)
 
-        val sliderAdapter = SliderAdapter(
-            context,
-            AppData().getImages()
-        )
+//        val sliderAdapter = SliderAdapter(
+//            context,
+//            AppData().getImages()
+//        )
         binding.viewPager.adapter = sliderAdapter
 
 

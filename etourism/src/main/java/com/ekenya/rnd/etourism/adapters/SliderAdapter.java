@@ -13,6 +13,7 @@ import androidx.viewpager.widget.PagerAdapter;
 import com.ekenya.rnd.etourism.R;
 import com.ekenya.rnd.etourism.databinding.SlidesLayoutBinding;
 import com.ekenya.rnd.etourism.models.SliderImage;
+import com.ekenya.rnd.etourism.ui.AppData;
 
 import java.util.List;
 
@@ -24,9 +25,9 @@ public class SliderAdapter extends PagerAdapter {
     private List<SliderImage> images;
 
     @Inject
-    public SliderAdapter  (Context context, List<SliderImage> images) {
+    public SliderAdapter  (Context context, AppData appData) {
         this.context = context;
-        this.images = images;
+        this.images = appData.getImages();
 
     }
 
