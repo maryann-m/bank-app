@@ -7,7 +7,7 @@
         dist:instant="false"
         dist:title="@string/title_etourism">
         <dist:delivery>
-            <dist:install-time />
+            <dist:on-demand />
         </dist:delivery>
         <dist:fusing dist:include="true" />
     </dist:module>
@@ -16,6 +16,6 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/Theme.ETourism"></activity>
+            android:theme="@style/Theme.Etourism"></activity>
     </application>
 </manifest>

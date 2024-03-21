@@ -1,7 +1,7 @@
 package com.ekenya.rnd.etourism.di.injectables
 
 import androidx.lifecycle.ViewModel
-import com.ekenya.rnd.baseapp.di.ViewModelKey
+import com.ekenya.rnd.common.di.ViewModelKey
 import com.ekenya.rnd.etourism.MainActivity
 import com.ekenya.rnd.etourism.ui.dashboard.DashboardViewModel
 import dagger.Binds

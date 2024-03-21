@@ -2,7 +2,7 @@ package com.ekenya.rnd.etourism.di.injectables
 
 import androidx.lifecycle.ViewModel
 import androidx.viewpager.widget.PagerAdapter
-import com.ekenya.rnd.baseapp.di.ViewModelKey
+import com.ekenya.rnd.common.di.ViewModelKey
 import com.ekenya.rnd.etourism.adapters.SliderAdapter
 import com.ekenya.rnd.etourism.ui.AppData
 import com.ekenya.rnd.etourism.ui.dashboard.DashboardFragment

@@ -1,6 +1,6 @@
 package com.ekenya.rnd.etourism.ui
 
-import com.ekenya.rnd.baseapp.di.ModuleScope
+
 import com.ekenya.rnd.etourism.R
 import com.ekenya.rnd.etourism.models.*
 import dagger.Module

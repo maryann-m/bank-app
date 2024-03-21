@@ -1,15 +1,16 @@
 plugins {
     id 'com.android.dynamic-feature'
     id 'kotlin-android'
-    id 'kotlin-android-extensions'
+//    id 'kotlin-android-extensions'
     id 'kotlin-kapt'
 }
 android {
+    namespace 'com.ekenya.rnd.etourism'
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 25
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -23,16 +24,24 @@ android {
     buildFeatures {
         viewBinding true
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
 }
 
 dependencies {
-    implementation project(":app")
+    implementation project(":mobile")
     //Shared Library
     implementation  project(":common")
     //
     implementation 'androidx.core:core-ktx:'+ rootProject.kotlinCoreVersion
     //
-    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:'+rootProject.youtubeplayerversion
+//    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:'+rootProject.youtubeplayerversion
     //stepview
     implementation 'com.shuhart.stepview:stepview:' +rootProject.stepViewVersion
 
