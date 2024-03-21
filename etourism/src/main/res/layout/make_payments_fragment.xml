@@ -62,7 +62,7 @@
                         android:layout_height="40dp"
                         android:alpha=".6"
                         android:background="@drawable/greybackground"
-                        android:drawableLeft="@drawable/ic_search"
+                        android:drawableLeft="@drawable/ic_search_cm"
                         android:drawablePadding="@dimen/margin12dp"
                         android:padding="@dimen/margin12dp"
                         android:paddingLeft="20dp"

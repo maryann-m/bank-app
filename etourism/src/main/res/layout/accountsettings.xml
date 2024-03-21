@@ -76,7 +76,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/personaldetailstv"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/personaldetailstv"
-            android:src="@drawable/ic_person" />
+            android:src="@drawable/ic_person_etourism" />
         <View
             android:id="@+id/personaldetailsview"
             android:layout_width="0dp"
@@ -111,7 +111,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/myTravelstv"
             app:layout_constraintStart_toStartOf="@+id/personaldetailsicon"
             app:layout_constraintTop_toTopOf="@+id/myTravelstv"
-            android:src="@drawable/ic_plane" />
+            android:src="@drawable/ic_etourism" />
 
         <TextView
             android:id="@+id/supportstv"
@@ -138,7 +138,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/supportstv"
             app:layout_constraintStart_toStartOf="@+id/personaldetailsicon"
             app:layout_constraintTop_toTopOf="@+id/supportstv"
-            android:src="@drawable/ic_support" />
+            android:src="@drawable/ic_support_etourism" />
 
         <TextView
             android:id="@+id/changepintv"
@@ -184,7 +184,7 @@
             android:id="@+id/logoutimage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_exit"
+            android:src="@drawable/ic_exit_etourism"
             app:layout_constraintBottom_toBottomOf="@+id/logouttv"
             app:layout_constraintStart_toStartOf="@+id/personaldetailsicon"
             app:layout_constraintTop_toTopOf="@+id/logouttv" />

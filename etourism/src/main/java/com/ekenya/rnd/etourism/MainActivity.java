@@ -19,7 +19,7 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.ekenya.rnd.baseapp.MobileBankingApp;
 import com.ekenya.rnd.common.abstractions.BaseActivity;
-import com.ekenya.rnd.etourism.databinding.ActivityMainBinding;
+import com.ekenya.rnd.etourism.databinding.ActivityMainEtourismBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
@@ -30,7 +30,7 @@ import dagger.android.AndroidInjector;
 
 public class MainActivity extends BaseActivity {
 
-    private ActivityMainBinding binding;
+    private ActivityMainEtourismBinding binding;
     private NavController navController;
 
     @Inject
@@ -50,7 +50,7 @@ public class MainActivity extends BaseActivity {
 
         }
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        binding = ActivityMainEtourismBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         //
         //mViewModel = ViewModelProviders.of(this, viewModelFactory).get(MainViewModel.class);

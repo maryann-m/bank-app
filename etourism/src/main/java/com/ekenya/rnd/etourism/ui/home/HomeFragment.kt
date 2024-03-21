@@ -16,7 +16,7 @@ import androidx.viewpager.widget.ViewPager
 import com.ekenya.rnd.common.abstractions.BaseDaggerFragment
 import com.ekenya.rnd.etourism.R
 import com.ekenya.rnd.etourism.adapters.SliderAdapter
-import com.ekenya.rnd.etourism.databinding.FragmentHomeBinding
+import com.ekenya.rnd.etourism.databinding.FragmentHomeEtourismBinding
 import com.ekenya.rnd.etourism.ui.AppData
 import javax.inject.Inject
 
@@ -26,7 +26,7 @@ class HomeFragment : BaseDaggerFragment() {
     private lateinit var dotsLayout: LinearLayout
 
     private var homeViewModel: HomeViewModel? = null
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentHomeEtourismBinding? = null
   //  @Inject
     //lateinit var sliderAdapter:SliderAdapter
 
@@ -53,7 +53,7 @@ class HomeFragment : BaseDaggerFragment() {
             HomeViewModel::class.java
         )
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentHomeEtourismBinding.inflate(inflater, container, false)
         dotsLayout = binding.dots
         addDots(0)
         binding.viewPager.addOnPageChangeListener(changeListener)

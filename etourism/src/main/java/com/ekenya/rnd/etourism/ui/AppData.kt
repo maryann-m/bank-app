@@ -3,8 +3,6 @@ package com.ekenya.rnd.etourism.ui
 
 import com.ekenya.rnd.etourism.R
 import com.ekenya.rnd.etourism.models.*
-import dagger.Module
-import dagger.Provides
 import javax.inject.Inject
 
 class AppData @Inject constructor() {
@@ -13,7 +11,7 @@ class AppData @Inject constructor() {
 
         val itemlist= ArrayList<UpcomingTrip>()
         itemlist.add(UpcomingTrip(R.drawable.sutirta,R.drawable.ic_heart__1_,"Maasai Mara Specials","12/12/2020"))
-        itemlist.add(UpcomingTrip(R.drawable.scott,R.drawable.ic_heart,"Meru Camp","12/12/2020"))
+        itemlist.add(UpcomingTrip(R.drawable.scott,R.drawable.ic_heart_etourism,"Meru Camp","12/12/2020"))
         itemlist.add(UpcomingTrip(R.drawable.cinthia,R.drawable.ic_heart__1_,"Samburu Bush Safari","12/12/2020"))
 
         return itemlist
@@ -68,11 +66,11 @@ class AppData @Inject constructor() {
     }
      fun getHistoryitems(): List<HistoryItem> {
         val tripHistory = ArrayList<HistoryItem>()
-        tripHistory.add(HistoryItem(R.drawable.ic_check,"Maasai mara",100000,"12/12/2020"))
+        tripHistory.add(HistoryItem(R.drawable.ic_check_etourism,"Maasai mara",100000,"12/12/2020"))
         tripHistory.add(HistoryItem(R.drawable.ic_chaza_card_1,"Topped Up",20000,"08/08/2021"))
         tripHistory.add(HistoryItem(R.drawable.ic_chaza_card_1,"Chaza Card purchase",20000,"12/12/2021"))
         tripHistory.add(HistoryItem(R.drawable.ic_savings_account,"Maasai mara",20000,"12/12/2021"))
-        tripHistory.add(HistoryItem(R.drawable.ic_check,"Maasai mara",20000,"12/12/2021"))
+        tripHistory.add(HistoryItem(R.drawable.ic_check_etourism,"Maasai mara",20000,"12/12/2021"))
 
         return tripHistory
 
@@ -113,9 +111,9 @@ class AppData @Inject constructor() {
     fun getPaymentOptionsList(): List<Paymentoption> {
         val items = ArrayList<Paymentoption>()
         items.add(Paymentoption(R.drawable.ic_mpesa_logo,"Mpesa"))
-        items.add(Paymentoption(R.drawable.airtel,"Airtel"))
+        items.add(Paymentoption(R.drawable.airtel_etourism,"Airtel"))
         items.add(Paymentoption(R.drawable.ic_credit_card,"Bank Cards"))
-        items.add(Paymentoption(R.drawable.pesalink,"Pesa Link"))
+        items.add(Paymentoption(R.drawable.pesalink_etourism,"Pesa Link"))
         items.add(Paymentoption(R.drawable.ic_chaza_card_1,"Chaza Card"))
 
         return items
@@ -126,7 +124,7 @@ class AppData @Inject constructor() {
         val items = ArrayList<Photo>()
         items.add(Photo(R.drawable.chui))
         items.add(Photo(R.drawable.elcarito))
-        items.add(Photo(R.drawable.screenshot))
+        items.add(Photo(R.drawable.screenshot_etourism))
         items.add(Photo(R.drawable.redcharlie))
         items.add(Photo(R.drawable.eunice2))
         items.add(Photo(R.drawable.sneha2))
@@ -141,10 +139,10 @@ class AppData @Inject constructor() {
 
     fun getPayments(): List<PaymentHistoryItem> {
         val items = ArrayList<PaymentHistoryItem>()
-        items.add(PaymentHistoryItem(R.drawable.netflix,"Netflix","faithckorir@gmail.com","KSH 1,000.00"))
-        items.add(PaymentHistoryItem(R.drawable.zuku,"Zuku","A/C 320897","KSH 1,000.00"))
+        items.add(PaymentHistoryItem(R.drawable.netflix_etourism,"Netflix","faithckorir@gmail.com","KSH 1,000.00"))
+        items.add(PaymentHistoryItem(R.drawable.zuku_etourism,"Zuku","A/C 320897","KSH 1,000.00"))
         items.add(PaymentHistoryItem(R.drawable.showmax,"Showmax","alexwan..@gmail.com","KSH 1,000.00"))
-        items.add(PaymentHistoryItem(R.drawable.netflix,"Netflix","faithckorir@gmail.com","KSH 1,200.00"))
+        items.add(PaymentHistoryItem(R.drawable.netflix_etourism,"Netflix","faithckorir@gmail.com","KSH 1,200.00"))
 
         return items
 

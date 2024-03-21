@@ -59,7 +59,7 @@
                     <ImageView
                         android:id="@+id/search"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_search"
+                        android:src="@drawable/ic_search_cm"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/welcome_tv"
                         app:layout_constraintEnd_toStartOf="@id/message"
@@ -68,7 +68,7 @@
                     <ImageView
                         android:id="@+id/message"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_message"
+                        android:src="@drawable/ic_message_etourism"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toEndOf="@id/search"
                         app:layout_constraintEnd_toStartOf="@id/bag"

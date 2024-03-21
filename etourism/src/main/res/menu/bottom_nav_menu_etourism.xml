@@ -8,16 +8,16 @@
 
     <item
         android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_shop"
+        android:icon="@drawable/ic_shop_etourisn"
         android:title="@string/shop" />
 
     <item
         android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_wallet"
+        android:icon="@drawable/ic_wallet_etourism"
         android:title="@string/wallet" />
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_profile"
+        android:icon="@drawable/ic_profile_etourism"
         android:title="@string/profile" />
 
 </menu>

@@ -56,7 +56,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/fragmenttitletv"
                         app:layout_constraintTop_toTopOf="parent"
-                        android:src="@drawable/airtel" />
+                        android:src="@drawable/airtel_etourism" />
 
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
@@ -117,7 +117,7 @@
                 android:inputType="number"
                 android:textSize="10sp"
                 android:drawablePadding="@dimen/margin12dp"
-                android:drawableLeft="@drawable/ic_kenya"
+                android:drawableLeft="@drawable/ic_kenya_etourism"
                 android:layout_height="wrap_content"
 
                 />

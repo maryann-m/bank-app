@@ -99,7 +99,7 @@
                     android:src="@drawable/ic_layer_8" />
 
                 <Button
-                    android:drawableStart="@drawable/ic_message"
+                    android:drawableStart="@drawable/ic_message_etourism"
                     android:id="@+id/button6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -155,7 +155,7 @@
                 android:contentDescription="@string/_9_posts"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_dashboard"
+                android:src="@drawable/ic_dashboard_etourism"
                 app:layout_constraintEnd_toStartOf="@+id/view1"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread_inside"

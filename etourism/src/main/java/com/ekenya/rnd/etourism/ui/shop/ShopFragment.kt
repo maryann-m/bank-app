@@ -17,7 +17,7 @@ import com.ekenya.rnd.etourism.R
 import com.ekenya.rnd.etourism.adapters.CategoryItemsAdapter
 import com.ekenya.rnd.etourism.adapters.ShopAdapter
 import com.ekenya.rnd.etourism.adapters.SliderAdapter
-import com.ekenya.rnd.etourism.databinding.FragmentShopBinding
+import com.ekenya.rnd.etourism.databinding.FragmentShopEtourismBinding
 import com.ekenya.rnd.etourism.models.ShopCategoryItem
 import com.ekenya.rnd.etourism.models.ShopItem
 import com.ekenya.rnd.etourism.ui.AppData
@@ -30,7 +30,7 @@ class ShopFragment : BaseDaggerFragment() {
     private  var shopViewModel: ShopViewModel? = null
     private lateinit var rvAdapter: CategoryItemsAdapter
 
-    private var _binding: FragmentShopBinding? = null
+    private var _binding: FragmentShopEtourismBinding? = null
     private  lateinit var dotsLayout: LinearLayout
 
     // This property is only valid between onCreateView and
@@ -45,7 +45,7 @@ class ShopFragment : BaseDaggerFragment() {
         shopViewModel =
             ViewModelProvider(requireActivity(),viewModelFactory).get(ShopViewModel::class.java)
 
-        _binding = FragmentShopBinding.inflate(inflater, container, false)
+        _binding = FragmentShopEtourismBinding.inflate(inflater, container, false)
         val root: View = binding.root
         //toolbar
 

@@ -59,7 +59,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:src="@drawable/map"
+                    android:src="@drawable/map_etourism"
                     android:scaleType="centerCrop"/>
 
                 <androidx.appcompat.widget.Toolbar
@@ -72,7 +72,7 @@
 
                         android:id="@+id/close_icon"
                         android:layout_width="wrap_content"
-                        android:src="@drawable/ic_time"
+                        android:src="@drawable/ic_time_etourism"
                         android:layout_height="wrap_content"/>
                 </androidx.appcompat.widget.Toolbar>
             </RelativeLayout>

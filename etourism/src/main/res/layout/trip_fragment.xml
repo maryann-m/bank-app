@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="18dp"
-                android:src="@drawable/ic_baseline_share_24"
+                android:src="@drawable/ic_baseline_share_etourism"
                 app:layout_constraintEnd_toStartOf="@+id/imageView16"
                 app:layout_constraintTop_toTopOf="@+id/textView21" />
 
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="19dp"
                 android:layout_marginTop="15dp"
-                android:src="@drawable/ic_plane"
+                android:src="@drawable/ic_etourism"
                 app:layout_constraintEnd_toStartOf="@+id/imageView19"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -240,7 +240,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:src="@drawable/ic_light"
+                android:src="@drawable/ic_light_etourism"
                 app:layout_constraintStart_toStartOf="@+id/textView28"
                 app:layout_constraintTop_toBottomOf="@+id/temp_tv" />
 
@@ -315,7 +315,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="19dp"
                 android:layout_marginTop="15dp"
-                android:src="@drawable/ic_fire"
+                android:src="@drawable/ic_fire_etourism"
                 app:layout_constraintEnd_toStartOf="@+id/imageView24"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -326,7 +326,7 @@
                 android:id="@+id/imageView24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_mountain"
+                android:src="@drawable/ic_mountain_etourism"
                 app:layout_constraintEnd_toStartOf="@+id/imageView25"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/imageView23"
@@ -472,7 +472,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/textView34"
                 app:layout_constraintStart_toStartOf="@+id/textView30"
                 app:layout_constraintTop_toBottomOf="@+id/textView28"
-                app:srcCompat="@drawable/ic_graph" />
+                app:srcCompat="@drawable/ic_graph_etourism" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

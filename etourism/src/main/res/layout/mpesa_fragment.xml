@@ -118,7 +118,7 @@
                 android:inputType="number"
                 android:textSize="10sp"
                 android:drawablePadding="@dimen/margin12dp"
-                android:drawableLeft="@drawable/ic_kenya"
+                android:drawableLeft="@drawable/ic_kenya_etourism"
                 android:layout_height="wrap_content"
 
                 />

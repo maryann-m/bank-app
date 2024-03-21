@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.ekenya.rnd.etourism.R
-import com.ekenya.rnd.etourism.databinding.FragmentWalletBinding
+import com.ekenya.rnd.etourism.databinding.FragmentWalletEtourismBinding
 import javax.inject.Inject
 
 import kotlin.properties.Delegates
@@ -28,7 +28,7 @@ class NotificationsFragment : BaseDaggerFragment() {
     private var hasSetPin by Delegates.notNull<Boolean>()
     private val sharedPrefFile = "tourismdata"
 
-    private var _binding: FragmentWalletBinding? = null
+    private var _binding: FragmentWalletEtourismBinding? = null
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -53,7 +53,7 @@ class NotificationsFragment : BaseDaggerFragment() {
         walletViewModel =
             ViewModelProvider(this,viewModelFactory).get(WalletViewModel::class.java)
 
-        _binding = FragmentWalletBinding.inflate(inflater, container, false)
+        _binding = FragmentWalletEtourismBinding.inflate(inflater, container, false)
         val root: View = binding.root
         val sharedPreferences: SharedPreferences = requireActivity().getSharedPreferences(sharedPrefFile,
             Context.MODE_PRIVATE)
