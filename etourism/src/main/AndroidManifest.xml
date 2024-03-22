@@ -16,6 +16,6 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/Theme.Etourism"></activity>
+            android:theme="@style/Theme.Etourism" />
     </application>
 </manifest>
