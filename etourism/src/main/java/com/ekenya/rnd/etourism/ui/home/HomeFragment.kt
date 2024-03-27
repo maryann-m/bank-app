@@ -102,7 +102,7 @@ class HomeFragment : BaseDaggerFragment() {
             dots[i] = TextView(context)
             dots[i]!!.text = Html.fromHtml("&#8226")
             dots[i]!!.textSize = 30f
-            dots[i]!!.setTextColor(resources.getColor(R.color.black))
+            dots[i]!!.setTextColor(resources.getColor(R.color.text_grey))
             dotsLayout.addView(dots[i])
         }
         dots[position]!!.setTextColor(resources.getColor(R.color.app_red))

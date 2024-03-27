@@ -7,7 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="app_red">#D41E0F</color>
+<!--    <color name="app_red">#D41E0F</color>-->
+    <color name="app_red">@color/colorPrimary</color>
     <color name="app_grey">#e4e4e4</color>
     <color name="yellow">#FEC02D</color>
     <color name="purple">#C54987</color>

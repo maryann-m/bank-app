@@ -26,7 +26,8 @@
                     android:id="@+id/close_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_time_etourism" />
+                    android:src="@drawable/ic_time_etourism"
+                    app:tint="@color/colorAccent"/>
             </androidx.appcompat.widget.Toolbar>
 
 
@@ -126,6 +127,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:src="@drawable/ic_add__1_"
+            app:tint="@color/colorAccent"
             app:layout_constraintBottom_toBottomOf="@+id/liveSafarisRv"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/liveSafarisRv" />
