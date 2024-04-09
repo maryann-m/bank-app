@@ -10,6 +10,7 @@ android {
     buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
+        namespace "com.ekenya.rnd.baseapp"
         applicationId "com.ekenya.rnd.baseapp"
         minSdkVersion 21
         targetSdkVersion rootProject.compileSdkVersion
