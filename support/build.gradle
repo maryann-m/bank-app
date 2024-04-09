@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-kapt'
 }
 android {
+    namespace 'com.ekenya.rnd.support'
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
 
