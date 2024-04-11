@@ -1,6 +1,7 @@
 package com.ekenya.rnd.baseapp.di;
 
 import android.app.Application;
+import android.content.Context;
 
 
 import com.ekenya.rnd.baseapp.TourismApp;
@@ -22,15 +23,18 @@ import org.jetbrains.annotations.NotNull;
         AndroidSupportInjectionModule.class,
         AppModule.class,
         ViewModelModule.class,
-                ActivityModule.class,
+        ActivityModule.class,
         FragmentModule.class
-} )
-public interface    AppComponent extends AndroidInjector<TourismApp> {
+})
+public interface AppComponent extends AndroidInjector<TourismApp> {
     @NotNull
     SampleRepository sampleRepository();
 
     @NotNull
     Application getApp();
+
+    @NotNull
+    Context context();
 
     @Component.Builder
     public abstract static class Builder extends AndroidInjector.Builder<TourismApp> {

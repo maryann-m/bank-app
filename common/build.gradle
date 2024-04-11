@@ -6,12 +6,13 @@ plugins {
 }
 
 android {
+    namespace 'com.ekenya.rnd.common'
     compileSdkVersion rootProject.compileSdkVersion
     buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion rootProject.compileSdkVersion
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -73,5 +74,7 @@ dependencies {
     api "com.google.dagger:dagger:" + rootProject.googleDaggerVersion
     api "com.google.dagger:dagger-android:" + rootProject.googleDaggerVersion
     api "com.google.dagger:dagger-android-support:" + rootProject.googleDaggerVersion
+
+    api 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
 
 }
