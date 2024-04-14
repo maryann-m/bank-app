@@ -35,7 +35,9 @@ android {
 }
 
 dependencies {
+
     implementation project(':mobile')//Shared Library
+
     implementation  project(":common")
     //
     implementation 'androidx.core:core-ktx:'+ rootProject.kotlinCoreVersion
