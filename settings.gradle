@@ -5,7 +5,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "E Tourism"
-include ':app'
+include ':mobile'
 include ':common'
 include ':etourism'
 include ':support'

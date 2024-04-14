@@ -4,7 +4,7 @@ import android.app.Application;
 import android.content.Context;
 
 
-import com.ekenya.rnd.baseapp.TourismApp;
+import com.ekenya.rnd.baseapp.MobileBankingApp;
 import com.ekenya.rnd.baseapp.di.injectables.FragmentModule;
 import com.ekenya.rnd.common.repo.SampleRepository;
 import com.ekenya.rnd.baseapp.di.injectables.ActivityModule;
@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
         ActivityModule.class,
         FragmentModule.class
 })
-public interface AppComponent extends AndroidInjector<TourismApp> {
+public interface AppComponent extends AndroidInjector<MobileBankingApp> {
     @NotNull
     SampleRepository sampleRepository();
 
@@ -37,7 +37,7 @@ public interface AppComponent extends AndroidInjector<TourismApp> {
     Context context();
 
     @Component.Builder
-    public abstract static class Builder extends AndroidInjector.Builder<TourismApp> {
+    public abstract static class Builder extends AndroidInjector.Builder<MobileBankingApp> {
         @NotNull
         public abstract AppComponent build();
     }
